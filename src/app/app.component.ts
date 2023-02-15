@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Pokemon, PokemonGender } from './models/pokemon';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Pokedex-Angular-15';
+  title = 'Pokedex';
+  currentPokemonName = '';
+  pokemons: Pokemon[] = [];
+
+  addPokemon() {
+    this.pokemons.push({
+      name: this.currentPokemonName,
+      gender: this.getRandomGender(),
+    });
+  }
+
+  getRandomGender(): PokemonGender {
+    const rand = Math.random();
+    if (rand < 0.5) return 'male';
+    return 'female';
+  }
 }
