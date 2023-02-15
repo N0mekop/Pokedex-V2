@@ -4,14 +4,14 @@
 
   <div class="row mb-4">
     <div class="col-9">
-      <input type="text" class="form-control" [(ngModel)]="currentPokemonName" placeholder="Bulbizarre" />
+      <input type="text" class="form-control" [(ngModel)]="currentPokemonName" placeholder="Exemple: Bulbizarre" />
     </div>
     <div class="col-3">
-      <button class="btn btn-primary" (click)="addPokemon()">Ajouter</button>
+      <button class="btn btn-primary" (click)="onAddPokemonClick()">Ajouter</button>
     </div>
   </div>
 
   <app-pokemon-item *ngFor="let pokemon of pokemons; let index = index" [pokemon]="pokemon"
-    (onDelete)="deletePokemon(index)" />
+    (onDelete)="onDeletePokemonClick(index)" />
 
 </div>

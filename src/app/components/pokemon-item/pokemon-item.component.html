@@ -1,5 +1,5 @@
-<div class="row p-3 pokemon-item gender-male" *ngIf="pokemon"
-  [ngClass]="{ 'gender-male': pokemon.gender === 'male', 'gender-female': pokemon.gender === 'female' }">
+<div class="row p-3 mb-1 pokemon-item gender-male align-items-center" *ngIf="pokemon"
+  [ngClass]="{ 'gender-male': pokemon.gender === 'Mâle', 'gender-female': pokemon.gender === 'Femelle' }">
 
   <div class="col-9">
     {{ pokemon.name }} - {{ pokemon.gender }}

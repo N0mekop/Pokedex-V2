@@ -1,4 +1,4 @@
-export type PokemonGender = 'male' | 'female';
+export type PokemonGender = 'Mâle' | 'Femelle';
 
 export interface Pokemon {
   name: string;
