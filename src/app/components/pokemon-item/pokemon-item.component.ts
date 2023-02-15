@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon';
 
 @Component({
@@ -6,12 +6,11 @@ import { Pokemon } from 'src/app/models/pokemon';
   templateUrl: './pokemon-item.component.html',
   styleUrls: ['./pokemon-item.component.scss']
 })
-export class PokemonItemComponent implements OnInit {
+export class PokemonItemComponent {
   @Input() pokemon?: Pokemon;
+  @Output() onDelete = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit(): void {
+  onDeletePokemonClick() {
+    this.onDelete.emit();
   }
-
 }
