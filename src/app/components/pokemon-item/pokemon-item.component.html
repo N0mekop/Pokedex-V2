@@ -1,4 +1,5 @@
-<div class="row p-3" *ngIf="pokemon">
+<div class="row p-3 pokemon-item gender-male" *ngIf="pokemon"
+  [ngClass]="{ 'gender-male': pokemon.gender === 'male', 'gender-female': pokemon.gender === 'female' }">
   <div class="col-9">
     {{ pokemon.name }}
   </div>

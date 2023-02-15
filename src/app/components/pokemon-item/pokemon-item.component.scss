@@ -1,0 +1,12 @@
+.pokemon-item {
+
+  &.gender-male {
+    background-color: #bde0fe;
+    color: black;
+  }
+
+  &.gender-female {
+    background-color: #ffc8dd;
+    color: black;
+  }
+}
